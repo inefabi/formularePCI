@@ -1,0 +1,59 @@
+[
+    {
+        "text": "Revizuirea etichetelor tuturor produselor utilizate pentru curățarea și dezinfectarea suprafețelor de mediu și a echipamentelor de îngrijire a pacienților/rezidenților non-critice pentru următoarele informații. Comparați informațiile de pe etichetă cu modul în care persoana intervievată indică utilizarea produsului de către unitate:",
+        "name": "product_label_review",
+        "type": "input",
+        "description": "Care este utilizarea recomandată (de exemplu, tipuri de curățători sau dezinfectanți, tipuri de suprafețe, patogeni uciși)? Este necesar un pas inainte de curtare? Este necesară amestecarea sau diluția? Care este timpul de contact? Notați zonele în care practicile unității s-ar putea să nu fie consistente cu etichetarea produsului. Adunarea acestei informații la începutul procesului ICAR va ajuta facilitatorul să verifice selecția și utilizarea corectă a produselor utilizate pentru curățare și dezinfectare. Dacă produsul este un dezinfectant, ar trebui să existe un număr de înregistrare EPA pe etichetă."
+    },
+    {
+        "text": "Unde stochează personalul EVS proviziile pentru curățare și dezinfectare? (selectați tot ce se aplică)",
+        "name": "evs_supplies_storage",
+        "type": "multiselect",
+        "options": ["Într-o zonă de depozitare dedicată pe unitate", "Într-o zonă de depozitare comună departe de unitate", "Necunoscut", "Neevaluat", "Altul (specificați)"]
+    },
+    {
+        "text": "Se realizează amestecarea și diluția produselor pentru curățare și dezinfectare? (Dacă nu, săriți la întrebarea 4)",
+        "name": "product_mixing_and_dilution",
+        "type": "dropdown",
+        "options": ["Da", "Nu", "Nu a fost observat, dar confirmat de personalul din prima linie", "Nu a fost observat și nu este confirmat de personalul din prima linie", "Neevaluat"],
+        "description": "Dacă DA, vă rugăm să răspundeți la subîntrebările următoare:"
+    },
+    {
+        "text": "Cine are responsabilitatea atribuită pentru amestecare sau diluție?",
+        "name": "mixing_and_dilution_responsibility",
+        "type": "dropdown",
+        "options": ["Supervisorul EVS", "Personalul individual EVS", "Necunoscut", "Neevaluat", "Altul (specificați)"]
+    },
+    {
+        "text": "Se poartă EIP-ul adecvat de către persoana care efectuează amestecarea sau diluția?",
+        "name": "appropriate_ppe_for_mixing_dilution",
+        "type": "dropdown",
+        "options": ["Da", "Nu", "Nu a fost observat, dar confirmat de personalul din prima linie", "Nu a fost observat și nu este confirmat de personalul din prima linie"]
+    },
+    {
+        "text": "Se folosesc recipiente curate pentru a pregăti soluțiile?",
+        "name": "clean_containers_for_solution_preparation",
+        "type": "dropdown",
+        "options": ["Da", "Nu", "Nu a fost observat, dar confirmat de personalul din prima linie", "Nu a fost observat și nu este confirmat de personalul din prima linie"]
+    },
+    {
+        "text": "Sunt recipiente etichetate clar cu conținutul și o dată de expirare bazată pe instrucțiunile producătorului pentru stabilitate?",
+        "name": "containers_labeled_with_content_and_expiry_date",
+        "type": "dropdown",
+        "options": ["Da", "Nu", "Nu a fost observat, dar confirmat de personalul din prima linie", "Nu a fost observat și nu este confirmat de personalul din prima linie"]
+    },
+    {
+        "text": "Cât timp stochează unitatea produsele după amestecare sau diluție?",
+        "name": "storage_duration_after_mixing_dilution",
+        "type": "dropdown",
+        "options": ["24 de ore", "Mai mult de 24 de ore", "Mai puțin de 24 de ore", "Necunoscut", "Neevaluat"],
+        "description": "Produsele pentru curățare și dezinfectare sunt adesea vândute sub formă de formulări concentrate care sunt diluate pentru a face o soluție. Dacă nu sunt pregătite conform instrucțiunilor producătorului (de exemplu, prea concentrate sau prea diluate) s-ar putea să nu funcționeze așa cum se așteaptă și ar putea deteriora suprafețele sau să crească riscurile pentru personal și alții. Numai cei care au fost corespunzător instruiți ar trebui să amestece sau să dilueze produsele utilizate pentru curățare și dezinfectare, iar EIP-ul adecvat (conform instrucțiunilor producătorului și Precauțiilor Standard) ar trebui purtat. Unele facilități ar putea folosi un sistem de distribuție automată care înlocuiește nevoia de a măsura și amesteca sau dilua manual produsele; aceste sisteme necesită o calibrare regulată pentru a asigura că funcționează corect. Recipiente folosite pentru a stoca soluțiile pregătite ar trebui să fie curate, clar etichetate și să aibă o dată de expirare bazată pe instrucțiunile producătorului pentru stabilitate. Ele ar trebui să fie curățate și uscate înainte de reumplere și noua soluție nu ar trebui adăugată la soluția veche (\"topping off\")."
+    },
+    {
+        "text": "Cât de des sunt curățate și dezinfectate cărucioarele de curățenie (dacă sunt utilizate)?",
+        "name": "cleaning_and_disinfection_of_cleaning_carts",
+        "type": "dropdown",
+        "options": ["Zilnic", "Mai mult decât zilnic", "Mai puțin decât zilnic", "Nu se aplică (cărucioarele de curățenie nu sunt utilizate)", "Necunoscut", "Neevaluat"],
+        "description": "Cărucioarele de curățenie au fost asociate cu transmiterea organismelor multirezistente la medicamente. Pe cât posibil, acestea nu ar trebui să intre în camerele pacienților (în special dacă pacientul este sub Precauții Bazate pe Transmitere) și ar trebui să fie curățate și dezinfectate la sfârșitul fiecărei zile sau ture."
+    }
+]

@@ -1,0 +1,105 @@
+[
+    {
+        "text": "Dispune facilitatea de expertiza IPC la fata locului?",
+        "name": "ipc_on_site",
+        "type": "dropdown",
+        "options": ["Da", "Nu", "Necunoscut", "Neevaluat"]
+    },
+    {
+        "text": "Dispune facilitatea de expertiza IPC la distanta?",
+        "name": "ipc_remote",
+        "type": "dropdown",
+        "options": ["Da", "Nu", "Necunoscut", "Neevaluat"]
+    },
+    {
+        "text": "Persoana(le) responsabila(e) cu directionarea programului IPC la facilitate detine o acreditare national recunoscuta în controlul infectiilor (de exemplu, a-IPC CIC LTC-CIP BCIDP)?",
+        "name": "ipc_accreditation",
+        "type": "dropdown",
+        "options": ["Da", "Nu", "Necunoscut", "Neevaluat"]
+    },
+    {
+        "text": "Ce alte sarcini sunt efectuate de personalul din cadrul programului IPC? (selectati tot ce se aplica)",
+        "name": "ipc_additional_tasks",
+        "type": "multiselect",
+        "options": ["Sanatate ocupationala", "Educatia personalului", "Ofiter de securitate", "Administrativ (de exemplu, Director de Asistenta Medicala)", "Niciuna", "Neevaluat", "Altul (specificati)"]
+    },
+    {
+        "text": "Care crede directorul programului IPC ca sunt punctele forte si slabiciunile actuale în programul IPC?",
+        "name": "ipc_strengths_weaknesses",
+        "type": "input"
+    },
+    {
+        "text": "Dispune programul IPC de acces la înregistrarile medicale electronice ale pacientilor/rezidentilor?",
+        "name": "ipc_electronic_records_access",
+        "type": "dropdown",
+        "options": ["Da", "Nu", "Necunoscut", "Neevaluat"]
+    },
+    {
+        "text": "Utilizeaza programul IPC software pentru minerit de date/raportare?",
+        "name": "ipc_data_mining_reporting",
+        "type": "dropdown",
+        "options": ["Da", "Nu", "Necunoscut", "Neevaluat"]
+    },
+    {
+        "text": "Realizeaza programul IPC o evaluare anuala a riscurilor de infectie la nivelul facilitatii care evalueaza si prioritizeaza riscurile potentiale pentru infectii, contaminare si expuneri, precum si pregatirea programului de a elimina sau de a atenua astfel de riscuri?",
+        "name": "ipc_annual_risk_assessment",
+        "type": "dropdown",
+        "options": ["Da", "Nu", "Necunoscut", "Neevaluat"]
+    },
+    {
+        "text": "Sunt disponibile politici si proceduri scrise de control al infectiilor, actuale si bazate pe ghiduri bazate pe dovezi (de exemplu, CDC/HICPAC), reglementari sau standarde?",
+        "name": "ipc_written_policies_procedures",
+        "type": "dropdown",
+        "options": ["Da", "Nu", "Necunoscut", "Neevaluat"]
+    },
+    {
+        "text": "Cât de frecvent sunt revizuite si actualizate politicile si procedurile? (selectati tot ce se aplica)",
+        "name": "ipc_policies_procedures_review_frequency",
+        "type": "multiselect",
+        "options": ["Anual", "La fiecare trei ani", "Dupa cum este necesar când sunt publicate noi ghiduri sau dovezi (de exemplu, prin abonare la un editor)", "Necunoscut", "Neevaluat", "Altul (specificati)"]
+    },
+    {
+        "text": "Ofera programul IPC educatie pentru prevenirea infectiilor pacientilor, membrilor familiei si altor îngrijitori?",
+        "name": "ipc_education_for_infection_prevention",
+        "type": "dropdown",
+        "options": ["Da", "Nu", "Necunoscut", "Neevaluat"]
+    },
+    {
+        "text": "Daca da:",
+        "name": "",
+        "type": "input"
+    },
+    {
+        "text": "Ce subiecte sunt acoperite? (specificati)",
+        "name": "ipc_education_topics",
+        "type": "input"
+    },
+    {
+        "text": "Cum este oferita aceasta educatie (de exemplu, informatii incluse în pachetul de admitere sau externare, videoclipuri, semnalizare, instruire fata în fata)? (specificati)",
+        "name": "ipc_education_delivery_method",
+        "type": "input"
+    },
+    {
+        "text": "Dispune facilitatea de un comitet interdisciplinar de control al infectiilor pentru a aborda problemele identificate de programul IPC?",
+        "name": "ipc_interdisciplinary_committee",
+        "type": "dropdown",
+        "options": ["Da", "Nu", "Necunoscut", "Neevaluat"]
+    },
+    {
+        "text": "Daca da, specificati:",
+        "name": "",
+        "type": "input"
+    },
+    {
+        "text": "Cine face parte din comitetul de control al infectiilor? (selectati tot ce se aplica)",
+        "name": "ipc_committee_members",
+        "type": "multiselect",
+        "options": ["Director Medical", "Director de Asistenta Medicala", "Servicii de Mediu", "Necunoscut", "Neevaluat", "Altul (specificati)"]
+    },
+    {
+        "text": "Cât de des se întâlneste comitetul de control al infectiilor?",
+        "name": "ipc_committee_meeting_frequency",
+        "type": "dropdown",
+        "options": ["Lunar", "Trimestrial", "Necunoscut", "Neevaluat", "Altul (specificati)"]
+    }
+]

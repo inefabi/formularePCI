@@ -1,0 +1,98 @@
+[
+    {
+        "text": "Tipul facilității:",
+        "name": "facility_type",
+        "type": "dropdown",
+        "options": ["Spital", "Spital cu acces critic", "Spital de îngrijire acută pe termen lung"]
+    },
+    {
+        "text": "Face parte facilității dintr-un sistem integrat de sănătate?",
+        "name": "facility_integrated_system",
+        "type": "dropdown",
+        "options": ["Da", "Nu"],
+        "followup_question": {
+            "text": "Dacă da, specificați numele sistemului.",
+            "name": "facility_system_name",
+            "type": "input"
+        }
+    },
+    {
+        "text": "Este facilității acreditată?",
+        "name": "facility_accredited",
+        "type": "dropdown",
+        "options": ["Da", "Nu"],
+        "followup_question": [
+            {
+                "text": "Dacă da, specificați organizația de acreditare.",
+                "name": "facility_accrediting_organization",
+                "type": "input"
+            },
+            {
+                "text": "Data ultimului sondaj (lună/an).",
+                "name": "facility_last_survey_date",
+                "type": "input"
+            }
+        ]
+    },
+    {
+        "text": "Populațiile de pacienți servite:",
+        "name": "patient_populations_served",
+        "type": "multiselect",
+        "options": ["Adulți", "Pediatric", "Neonatal", "Obstetric", "Altul (specificați)"]
+    },
+    {
+        "text": "Numărul total de paturi licențiate:",
+        "name": "licensed_bed_count",
+        "type": "input"
+    },
+    {
+        "text": "Recensământul curent:",
+        "name": "current_census",
+        "type": "input"
+    },
+    {
+        "text": "Recensământul mediu zilnic în luna precedentă:",
+        "name": "average_daily_census_last_month",
+        "type": "input"
+    },
+    {
+        "text": "Ce tipuri de unități sunt în facilitate sau fac parte din campus? (selectați tot ce se aplică)",
+        "name": "facility_units",
+        "type": "multiselect",
+        "options": [
+            "Departamentul de Urgențe",
+            "Unitate de Hemodializă",
+            "Centru de Traumatologie (Specificați nivelul)",
+            "ICU (Specificați tipul: Medical, Chirurgical, Neuro, Cardiac, Arsuri, Pediatric, Neonatal (specificați nivelurile), Altul (specificați))",
+            "Saloane (Specificați tipul: Medical, Chirurgical, Pediatric, Obstetrică, Ginecologic, Sănătate comportamentală, Oncologie, Transplant de organe solide, Transplant de măduvă osoasă, Reabilitare internă, Altul (specificați))",
+            "Îngrijire pe termen lung (Specificați tipul: Îngrijire acută pe termen lung, Îngrijire pe termen lung, Reabilitare internă, Altul (specificați))",
+            "Ambulator (Specificați tipul: Chirurgie ambulatorie, Stomatologie, Infuzie, Chimioterapie, Îngrijire medicală ambulatorie, Terapii fizice/ocupaționale, Podiatrie, Îngrijire a rănilor ambulatorii, Altul (specificați))"
+        ]
+    },
+    {
+        "text": "Este responsabil programul IPC pentru supravegherea IPC a acestor locații de îngrijire pe termen lung?",
+        "name": "ipc_supervision_long_term_care",
+        "type": "dropdown",
+        "options": ["Da", "Nu", "Necunoscut", "Neevaluat"]
+    },
+    {
+        "text": "Dacă nu, specificați cine asigură supravegherea IPC în aceste locații de îngrijire pe termen lung.",
+        "name": "ipc_supervision_long_term_care_alternate",
+        "type": "input",
+        "conditional_question": "ipc_supervision_long_term_care",
+        "conditional_value": "Nu"
+    },
+    {
+        "text": "Este responsabil programul IPC pentru supravegherea IPC a acestor locații ambulatorii?",
+        "name": "ipc_supervision_ambulatory",
+        "type": "dropdown",
+        "options": ["Da", "Nu", "Necunoscut", "Neevaluat"]
+    },
+    {
+        "text": "Dacă nu, specificați cine asigură supravegherea IPC în aceste locații ambulatorii.",
+        "name": "ipc_supervision_ambulatory_alternate",
+        "type": "input",
+        "conditional_question": "ipc_supervision_ambulatory",
+        "conditional_value": "Nu"
+    }
+]

@@ -1,0 +1,69 @@
+[
+    {
+        "text": "Există politici care indică suprafețele de mediu ce trebuie curățate și dezinfectate în mod regulat (de exemplu, zilnic) în camerele pacienților/rezidenților?",
+        "name": "environmental_cleaning_policies",
+        "type": "dropdown",
+        "options": ["Da", "Nu", "Necunoscut", "Neevaluat"],
+        "description": "Dacă DA, vă rugăm să descrieți, inclusiv dacă și cum diferă aceste politici în funcție de tipul de cameră sau zonă."
+    },
+    {
+        "text": "Există un proces pentru selectarea produselor utilizate de unitate pentru curățare și dezinfectare?",
+        "name": "product_selection_process",
+        "type": "dropdown",
+        "options": ["Da", "Nu", "Necunoscut", "Neevaluat"],
+        "description": "Dacă DA, vă rugăm să descrieți factorii luați în considerare la selectarea produselor (de exemplu, eficacitatea împotriva patogenilor comuni, compatibilitatea cu suprafețele)."
+    },
+    {
+        "text": "Cât de des sunt curățate și dezinfectate suprafețele de mediu cu atingere frecventă în camerele pacienților/rezidenților?",
+        "name": "frequency_of_cleaning",
+        "type": "multiselect",
+        "options": ["Zilnic", "Mai mult decât zilnic", "Mai puțin decât zilnic", "Necunoscut", "Neevaluat", "Altul (specificați)"]
+    },
+    {
+        "text": "Există politici care adresează ordinea în care suprafețele de mediu sunt curățate și dezinfectate în camerele pacienților/rezidenților (de exemplu, de sus în jos, de la curat la murdar, toaleta curățată și dezinfectată la final)?",
+        "name": "cleaning_order_policies",
+        "type": "dropdown",
+        "options": ["Da", "Nu", "Necunoscut", "Neevaluat"],
+        "description": "Dacă DA, vă rugăm să descrieți."
+    },
+    {
+        "text": "Există un proces pentru a indica când o cameră/spațiu de pat a fost curățat și dezinfectat?",
+        "name": "room_cleaning_indication_process",
+        "type": "dropdown",
+        "options": ["Da", "Nu", "Necunoscut", "Neevaluat"],
+        "description": "Dacă DA, vă rugăm să descrieți."
+    },
+    {
+        "text": "Există un proces pentru determinarea timpului minim de curățare a unei camere a pacientului/rezidentului?",
+        "name": "minimum_cleaning_time_process",
+        "type": "multiselect",
+        "options": ["Mărimea camerei", "Numărul de suprafețe", "Numărul de pacienți/rezidenți în cameră", "Tipul de curățare și dezinfectare (de exemplu, rutină vs terminal)", "Feedback de la personalul EVS", "Feedback de la alte cadre (de exemplu, asistenți medicali)", "Necunoscut", "Neevaluat", "Altul (specificați)"]
+    },
+    {
+        "text": "Are unitatea zone de duș comunale pentru baia pacienților/rezidenților?",
+        "name": "communal_shower_areas",
+        "type": "dropdown",
+        "options": ["Da", "Nu", "Necunoscut", "Neevaluat"],
+        "description": "Dacă DA, vă rugăm să descrieți frecvența și procesul de curățare și dezinfectare (de exemplu, care suprafețe sunt curățate și dezinfectate între rezidenți, cum sunt gestionate cărucioarele de duș)."
+    },
+    {
+        "text": "Cine are responsabilitatea atribuită pentru curățarea și dezinfectarea următoarelor echipamente reutilizabile de îngrijire a pacienților/rezidenților non-critice?",
+        "name": "responsibility_for_cleaning_equipment",
+        "type": "multiselect",
+        "options": ["Personalul EVS", "Personalul de asistență medicală", "Asistent medical certificat (CNA)", "Utilizatorul", "Necunoscut", "Neevaluat", "Altul (specificați)"]
+    },
+    {
+        "text": "Există un proces pentru a asigura că echipamentul reutilizabil de îngrijire a pacienților/rezidenților non-critic este curățat și dezinfectat după fiecare utilizare?",
+        "name": "equipment_cleaning_process",
+        "type": "dropdown",
+        "options": ["Da", "Nu", "Necunoscut", "Neevaluat"],
+        "description": "Dacă DA, vă rugăm să descrieți procesul (de exemplu, cine este responsabil, cum este monitorizat, cum sunt gestionate excepțiile)."
+    },
+    {
+        "text": "Are unitatea o politică care prevede că echipamentul non-critic de unică folosință (de exemplu, stetoscopul de unică folosință) nu trebuie să fie reutilizat?",
+        "name": "disposable_equipment_policy",
+        "type": "dropdown",
+        "options": ["Da", "Nu", "Necunoscut", "Neevaluat"],
+        "description": "Dacă DA, vă rugăm să descrieți."
+    }   
+]
