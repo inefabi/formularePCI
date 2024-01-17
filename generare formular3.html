@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formular IPC</title>
+    <style>
+        /* Stiluri pentru formular */
+        #ipcForm {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Stiluri pentru întrebări */
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Stiluri pentru câmpuri de introducere și meniuri select */
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        /* Stil pentru butonul de trimitere */
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Stiluri pentru clasele adăugate dinamic */
+        .dropdown {
+            /* Stil pentru meniul select */
+        }
+
+        .text-input {
+            /* Stil pentru câmpul de introducere de tip text */
+        }
+		.multiselect {
+            /* Stil pentru meniul select multiplu */
+            height: auto; /* Face ca meniul select să se extindă pe înălțime */
+        }
+    </style>
+</head>
+<div id="scoreDiv"></div>
+	<label for="jsonFile">Selectați un fișier JSON:</label>
+	<select id="jsonSelect">
+		<option value="https://github.com/inefabi/formularePCI/blob/main/q1.json">Numele Fișierului 1</option>
+		<option value="link_catre_fisier2.json">Numele Fișierului 2</option>
+		<!-- Adăugați aici opțiuni pentru fiecare fișier JSON disponibil -->
+	</select>
+	<button type="button" onclick="loadSelectedJson()">Încărcați întrebările</button>
+
+
+	<form id="ipcForm">
+        <h1>Formular IPC</h1>
+
+        <!-- Aici veți crea întrebările și controalele corespunzătoare folosind JavaScript -->
+
+        <!-- Butonul Submit rămâne constant pe pagină -->
+        <input type="submit" value="Trimite">
+    </form>
+
+    <script>
+        const userResponses = {};
+        let questions = []; // Declarați variabila questions înainte de a încărca întrebările din fișierul JSON
+
+		function loadQuestions() {
+			const jsonFileInput = document.getElementById('jsonFile');
+			const file = jsonFileInput.files[0];
+
+			if (file) {
+				const reader = new FileReader();
+
+				reader.onload = function (event) {
+					try {
+						const jsonContent = JSON.parse(event.target.result);
+						if (Array.isArray(jsonContent)) {
+							questions = jsonContent; // Salvați întrebările din fișierul JSON în variabila questions
+							createForm(); // Apelați funcția care creează formularul
+						} else {
+							console.error('Fișierul JSON trebuie să conțină un array de întrebări.');
+						}
+					} catch (error) {
+						console.error('Eroare la parsarea fișierului JSON:', error);
+					}
+				};
+
+				reader.readAsText(file);
+			}
+		}
+function loadSelectedJson() {
+    const jsonSelect = document.getElementById('jsonSelect');
+    const selectedJson = jsonSelect.value; // Obțineți valoarea selectată din lista de opțiuni
+
+    fetch(selectedJson) // Încărcați fișierul JSON folosind fetch
+        .then(response => response.json())
+        .then(data => {
+            if (Array.isArray(data)) {
+                questions = data; // Salvați întrebările din fișierul JSON în variabila questions
+                createForm(); // Apelați funcția care creează formularul
+            } else {
+                console.error('Fișierul JSON trebuie să conțină un array de întrebări.');
+            }
+        })
+        .catch(error => {
+            console.error('Eroare la încărcarea fișierului JSON:', error);
+        });
+}
+
+		// Definiți funcția createForm() care creează formularul după încărcarea întrebărilor
+		function createForm() {
+			const form = document.getElementById('ipcForm');
+			form.innerHTML = ''; // Ștergeți conținutul anterior al formularului
+
+			questions.forEach((question, index) => {
+				const fieldset = document.createElement('fieldset');
+				const legend = document.createElement('legend');
+				legend.textContent = `Întrebarea ${index + 1}`;
+				fieldset.appendChild(legend);
+
+				const label = document.createElement('label');
+				label.textContent = question.text;
+				fieldset.appendChild(label);
+
+				let inputControl;
+
+				if (question.type === "dropdown" && question.options.length > 0) {
+					inputControl = document.createElement('select');
+					inputControl.name = question.name;
+					inputControl.className = 'dropdown'; // Adaugă clasa pentru stilizare CSS
+
+					question.options.forEach(option => {
+						const optionElement = document.createElement('option');
+						optionElement.value = option;
+						optionElement.textContent = option;
+						inputControl.appendChild(optionElement);
+					});
+				} else if (question.type === "input") {
+					inputControl = document.createElement('input');
+					inputControl.type = 'text';
+					inputControl.name = question.name;
+					inputControl.className = 'text-input'; // Adaugă clasa pentru stilizare CSS
+				} else if (question.type === "multiselect") {
+					inputControl = document.createElement('select');
+					inputControl.name = question.name;
+					inputControl.className = 'multiselect'; // Adaugă clasa pentru stilizare CSS
+					inputControl.multiple = true; // Adaugă atributul pentru selecție multiplă
+
+					question.options.forEach(option => {
+						const optionElement = document.createElement('option');
+						optionElement.value = option;
+						optionElement.textContent = option;
+						inputControl.appendChild(optionElement);
+					});
+				} else {
+					// Adaugă aici alte tipuri de controale
+				}
+
+				if (inputControl) {
+					fieldset.appendChild(inputControl);
+					form.appendChild(fieldset);
+				}
+			});
+		}
+
+        const form = document.getElementById('ipcForm');
+		// Restul codului pentru gestionarea răspunsurilor și trimiterea lor poate rămâne neschimbat
+		form.addEventListener('submit', function (event) {
+			event.preventDefault(); // Opriți comportamentul implicit al trimiterii formularului
+
+			// Colectați răspunsurile utilizatorilor și stocați-le în obiect
+			questions.forEach((question, index) => {
+				const inputControl = form.elements[question.name];
+				let answer;
+
+				if (inputControl) {
+					if (question.type === "multiselect") {
+						// Pentru întrebările de tip "multiselect", colectați toate opțiunile selectate
+						answer = Array.from(inputControl.selectedOptions, option => option.value);
+					} else {
+						answer = inputControl.value;
+					}
+
+					userResponses[question.name] = answer;
+				}
+			});
+
+			// Puteți adăuga aici cod suplimentar pentru prelucrarea sau trimiterea răspunsurilor către un server sau o bază de date.
+
+			// Afisare răspunsuri în consolă (doar pentru exemplu)
+			console.log("Răspunsuri utilizator:", userResponses);
+
+			// Aici puteți adăuga cod pentru calcularea statisticilor pe baza răspunsurilor
+
+			// Puteți reseta formularul după trimitere, dacă doriți
+			// form.reset();
+		});
+    </script>
+</body>
+</html>
